@@ -3,156 +3,1187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redbox Gourmet — Royal Boutique Mockup</title>
+<title>Redbox Gourmet — Handcrafted Treats &amp; Confections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --burgundy:#970f20;
-  --burgundy2:#c0182b;
-  --deep:#42030b;
-  --cream:#f8e8e5;
-  --ivory:#fffaf0;
-  --gold:#c6a15a;
-  --softgold:#e2cc95;
-  --ink:#211816;
+:root {
+  --burgundy: #8c0d1e;
+  --burgundy-deep: #52050e;
+  --burgundy-soft: #ab182b;
+  --cream: #faf5ee;
+  --cream-card: #fffdf9;
+  --cream-warm: #f4ecdf;
+  --gold: #c29d53;
+  --gold-light: #e8d3a7;
+  --ink: #231917;
+  --muted: #6e5e57;
+  --border-gold: rgba(194, 157, 83, 0.45);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:'Baskerville','Iowan Old Style','Palatino Linotype','Book Antiqua',Palatino,serif}
-a{text-decoration:none;color:inherit}
-.topbar{background:#620811;color:var(--softgold);text-align:center;padding:10px 16px;font:500 11px 'Avenir Next','Helvetica Neue',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}
-nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(126,7,19,.97);color:#fff7ec;border-bottom:1px solid rgba(226,204,149,.58);position:sticky;top:0;z-index:5}
-.navlinks,.actions{display:flex;gap:28px;font:500 11px 'Avenir Next','Helvetica Neue',Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
-.logo{text-align:center;color:#fff7ec;line-height:.9}
-.logo b{font-size:27px;letter-spacing:.11em;font-weight:500}
-.logo small{display:block;margin-top:8px;font:500 9px 'Avenir Next','Helvetica Neue',Arial,sans-serif;letter-spacing:.42em;color:#e7cf9d}
-.hero{min-height:82vh;display:grid;grid-template-columns:1fr 1fr;background:radial-gradient(ellipse at 72% 42%,rgba(255,213,173,.18),transparent 34%),linear-gradient(145deg,#d51d36 0%,#ad1026 42%,#790916 76%,#4a030b 100%);color:var(--ivory);position:relative}
-.copy{padding:10vh 7vw;display:flex;flex-direction:column;justify-content:center}
-.kicker{font:500 11px 'Avenir Next','Helvetica Neue',Arial,sans-serif;letter-spacing:.30em;text-transform:uppercase;color:var(--softgold);margin-bottom:22px}
-h1{font-size:clamp(54px,7vw,102px);line-height:.91;margin:0;font-weight:400;letter-spacing:-.025em;font-style:italic;text-shadow:0 8px 30px rgba(0,0,0,.13)}
-.copy p{max-width:520px;font-size:19px;line-height:1.65;color:#efe4d0;margin:28px 0 34px}
-.btn{display:inline-block;width:max-content;padding:15px 24px;border:1px solid var(--gold);font:500 11px 'Avenir Next','Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.19em}
-.art{display:flex;align-items:center;justify-content:center;padding:42px}
-.frame{width:min(78%,560px);aspect-ratio:4/5;border:1px solid var(--gold);padding:14px;position:relative}
-.frame:before,.frame:after{content:'✦';position:absolute;left:50%;transform:translateX(-50%);color:var(--softgold);background:#ad1026;padding:0 12px}
-.frame:before{top:-11px}.frame:after{bottom:-11px}
-.display{width:100%;height:100%;background:radial-gradient(circle at 50% 76%,rgba(236,192,110,.24),transparent 30%),#5d0711;display:flex;align-items:center;justify-content:center}
-.redbox{width:62%;aspect-ratio:1.35/1;background:linear-gradient(145deg,#ec2942,#bd132a 54%,#780815);border:1px solid #d7ad59;box-shadow:0 35px 60px rgba(0,0,0,.45);transform:perspective(700px) rotateX(7deg) rotateY(-8deg);display:flex;align-items:center;justify-content:center;color:var(--softgold);letter-spacing:.22em;font-size:20px}
-.intro{text-align:center;padding:118px 8vw 96px;background:linear-gradient(180deg,#fff4ee 0%,#fbe5e2 48%,#f5cbc8 100%);border-bottom:1px solid rgba(151,15,32,.20);position:relative;margin-top:-34px;border-radius:38px 38px 0 0;z-index:2;box-shadow:0 -18px 50px rgba(82,4,14,.15)}
-.intro h2{font-size:clamp(40px,5vw,68px);font-weight:400;color:var(--burgundy);margin:8px auto 18px;letter-spacing:-.02em}
-.intro p{max-width:720px;margin:auto;font-size:18px;line-height:1.7;color:#6b5a49}
-.collections{padding:94px 5vw 120px;background:linear-gradient(180deg,#f5cbc8 0%,#d95a67 58%,#a40e22 100%)}
-.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}
-.sectionhead h3{margin:0;color:#760817;font-size:46px;font-weight:400;letter-spacing:-.015em}
-.sectionhead span{font:600 10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#680711}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:rgba(255,247,239,.96);border:1px solid rgba(255,222,175,.65);border-radius:24px;overflow:hidden;box-shadow:0 18px 50px rgba(92,4,16,.18);transition:transform .3s ease,box-shadow .3s ease}.card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(73,2,12,.26)}
-.visual{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#fffaf0 0%,#f2e3cc 68%,#e8d2b3 100%)}
-.visual.red{background:radial-gradient(circle at 50% 42%,#e53249 0%,#b20f25 58%,#650710 100%)}
-.visual.dark{background:radial-gradient(circle at 50% 42%,#a91a2b 0%,#650811 58%,#300307 100%)}
-.bowl{width:58%;aspect-ratio:1/.72;border-radius:50% 50% 44% 44%;background:linear-gradient(180deg,#d6b56d,#896120);box-shadow:0 22px 42px rgba(0,0,0,.25)}
-.bonbons{width:62%;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.bonbons i{display:block;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#f3daa3,#8a5c1d 64%,#452907);border:1px solid #d5b670;box-shadow:0 8px 18px rgba(0,0,0,.28)}
-.gift{width:56%;aspect-ratio:1.3/1;background:var(--cream);border:2px solid var(--gold);box-shadow:0 22px 45px rgba(0,0,0,.23);position:relative}
-.gift:before,.gift:after{content:'';position:absolute;background:var(--burgundy)}
-.gift:before{width:12%;height:100%;left:44%}.gift:after{height:15%;width:100%;top:43%}
-.info{padding:24px;display:flex;justify-content:space-between;gap:20px}
-.info h4{margin:0 0 6px;font-size:25px;font-weight:400;color:var(--burgundy)}
-.info p{margin:0;color:#78695d;font:13px/1.5 'Avenir Next','Helvetica Neue',Arial,sans-serif}
-.product-lines{margin-top:14px;color:#5f5148;font:13px/1.65 'Avenir Next','Helvetica Neue',Arial,sans-serif}
-.product-lines strong{display:block;margin-top:9px;color:#760817;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.product-lines strong:first-child{margin-top:0}
-.product-lines span{display:block}
-.ordering{padding:86px 6vw;background:#fff4ee;color:var(--ink)}
-.ordering h3{margin:0 0 12px;color:var(--burgundy);font-size:clamp(38px,5vw,58px);font-weight:400}
-.ordering-intro{max-width:740px;color:#6b5a49;font-size:17px;line-height:1.65;margin:0 0 30px}
-.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.policy-card{padding:24px;background:#fffaf0;border:1px solid rgba(151,15,32,.18);border-radius:18px}
-.policy-card h4{margin:0 0 9px;color:var(--burgundy);font-size:22px;font-weight:400}
-.policy-card p{margin:0;color:#6b5a49;font:14px/1.65 'Avenir Next','Helvetica Neue',Arial,sans-serif}
-.gifting{display:grid;grid-template-columns:1.1fr .9fr;min-height:590px;background:linear-gradient(145deg,#d31d35 0%,#a80e23 46%,#650710 100%);color:var(--ivory);border-radius:42px 42px 0 0;margin-top:-38px;position:relative;z-index:2;overflow:hidden;box-shadow:0 -20px 55px rgba(73,2,12,.24)}
-.giftart{background:radial-gradient(circle at 50% 48%,rgba(235,199,123,.28),transparent 32%),radial-gradient(circle at 20% 15%,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#700814,#c81931 68%,#7d0917);display:flex;align-items:center;justify-content:center}
-.giftart .gift{width:48%;background:#d9233b;transform:rotate(-6deg)}
-.giftcopy{padding:8vw;display:flex;flex-direction:column;justify-content:center}
-.giftcopy h3{font-size:58px;font-weight:400;margin:0 0 18px;letter-spacing:-.02em}
-.giftcopy p{font-size:18px;line-height:1.7;color:#efdfcc;max-width:500px}
-footer{background:var(--deep);color:#ddc7a7;padding:52px 5vw;display:flex;justify-content:space-between;align-items:end;gap:30px}
-footer .brand{font-size:29px;color:var(--ivory);letter-spacing:.08em}
-footer small{font:11px/1.7 'Avenir Next','Helvetica Neue',Arial,sans-serif;letter-spacing:.08em}
-@media(max-width:800px){
-  .navlinks{display:none}.hero{grid-template-columns:1fr}.copy{padding:78px 24px 38px}.art{padding:24px 24px 65px;min-height:500px}
-  .grid{grid-template-columns:1fr}.policy-grid{grid-template-columns:1fr}.gifting{grid-template-columns:1fr}.giftcopy{padding:70px 28px}.giftcopy h3{font-size:44px}footer{flex-direction:column;align-items:flex-start}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .serif-font {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.hand-font {
+  font-family: 'Caveat', cursive;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background: var(--burgundy-deep);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(232, 211, 167, 0.2);
+}
+
+/* Header & Navigation */
+header {
+  background: rgba(250, 245, 238, 0.94);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(140, 13, 30, 0.12);
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  text-align: center;
+}
+
+.brand-logo h1 {
+  font-size: 26px;
+  letter-spacing: 0.08em;
+  color: var(--burgundy);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-logo span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--burgundy);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--burgundy);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--burgundy);
+  box-shadow: 0 4px 14px rgba(140, 13, 30, 0.25);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-pill:hover {
+  background: var(--burgundy-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(140, 13, 30, 0.35);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--burgundy);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--burgundy);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--burgundy);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Shared Sections */
+section {
+  padding: 80px 24px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--burgundy);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(34px, 4.5vw, 52px);
+  color: var(--burgundy-deep);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-desc {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+/* Warm Hero Section (Candied Apples) */
+.hero-section {
+  padding: 60px 24px 80px;
+  position: relative;
+  background: radial-gradient(circle at 85% 20%, rgba(244, 236, 223, 0.8), transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(232, 211, 167, 0.25), transparent 45%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--border-gold);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--burgundy);
+  font-weight: 600;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(140, 13, 30, 0.06);
+}
+
+.hero-content h2 {
+  font-size: clamp(42px, 5.5vw, 70px);
+  line-height: 1.05;
+  color: var(--burgundy-deep);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.hero-content h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--burgundy-soft);
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 34px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-frame {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 220px 220px 32px 32px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 24px 50px rgba(82, 5, 14, 0.18), 0 0 0 1px rgba(194, 157, 83, 0.4);
+  transform: rotate(-1.5deg);
+  transition: transform 0.4s ease;
+  background: #fff;
+}
+
+.hero-frame:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+.hero-frame img {
+  width: 100%;
+  aspect-ratio: 3/4.2;
+  object-fit: cover;
+}
+
+.hero-sticky-note {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: #fffdf7;
+  border: 1px dashed var(--gold);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 12px 28px rgba(35, 25, 23, 0.12);
+  transform: rotate(4deg);
+  z-index: 3;
+}
+
+.hero-sticky-note .hand-font {
+  font-size: 24px;
+  color: var(--burgundy);
+  line-height: 1.2;
+}
+
+.hero-sticky-note p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Action Order 1: Shop Products */
+.shop-section {
+  background: var(--cream-warm);
+  border-top: 1px solid rgba(140, 13, 30, 0.08);
+  border-bottom: 1px solid rgba(140, 13, 30, 0.08);
+}
+
+.shop-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.shop-header .section-desc {
+  margin: 0 auto;
+}
+
+/* Popcorn Duo (Grouped Together) */
+.popcorn-duo {
+  background: var(--cream-card);
+  border-radius: 28px;
+  padding: 40px;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 16px 40px rgba(140, 13, 30, 0.05);
+  margin-bottom: 48px;
+}
+
+.duo-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(194, 157, 83, 0.25);
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.duo-label h3 {
+  font-size: 28px;
+  color: var(--burgundy);
+}
+
+.duo-label .flavors-badge {
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--burgundy);
+  border: 1px solid var(--border-gold);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 600;
+}
+
+.popcorn-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.popcorn-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(194, 157, 83, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.popcorn-card:hover {
+  transform: translateY(-4px);
+}
+
+.popcorn-card.tilt-left {
+  transform: rotate(-1deg);
+}
+.popcorn-card.tilt-left:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.popcorn-card.tilt-right {
+  transform: rotate(1.2deg);
+}
+.popcorn-card.tilt-right:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.popcorn-card .img-wrap {
+  aspect-ratio: 4/3.4;
+  overflow: hidden;
+  background: #faf6f0;
+}
+
+.popcorn-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popcorn-caption {
+  padding: 20px 24px;
+}
+
+.popcorn-caption h4 {
+  font-size: 20px;
+  color: var(--burgundy);
+  margin-bottom: 6px;
+}
+
+.popcorn-caption p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.flavor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.flavor-tag {
+  font-size: 12px;
+  background: var(--cream);
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Confections Grid: Pecans, Strawberries, Marshmallows, + Text Callouts */
+.confections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.treat-card {
+  background: var(--cream-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(140, 13, 30, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(140, 13, 30, 0.1);
+}
+
+.treat-img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  background: #fbf7f1;
+}
+
+.treat-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.treat-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--burgundy);
+  border: 1px solid var(--border-gold);
+}
+
+.treat-details {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.treat-details h4 {
+  font-size: 22px;
+  color: var(--burgundy);
+  margin-bottom: 8px;
+}
+
+.treat-details p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* Text Callout Cards for Gift Boxes & Royce Chocolate Bars */
+.callout-card {
+  background: linear-gradient(145deg, #fffcf6 0%, #f6edd9 100%);
+  border: 2px dashed var(--gold);
+  border-radius: 22px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(194, 157, 83, 0.08);
+}
+
+.callout-tag {
+  display: inline-block;
+  align-self: center;
+  background: var(--burgundy);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.callout-card h4 {
+  font-size: 24px;
+  color: var(--burgundy-deep);
+  margin-bottom: 10px;
+}
+
+.callout-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.callout-meta {
+  font-size: 12px;
+  color: var(--burgundy);
+  font-weight: 600;
+  background: rgba(140, 13, 30, 0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Action Order 2: Request a Custom Order */
+.custom-order-section {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-order-box {
+  background: linear-gradient(135deg, var(--burgundy-deep) 0%, var(--burgundy) 100%);
+  color: #fff;
+  border-radius: 32px;
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 24px 60px rgba(82, 5, 14, 0.25);
+  border: 1px solid rgba(232, 211, 167, 0.3);
+}
+
+.custom-order-box h3 {
+  font-size: clamp(32px, 4vw, 44px);
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.custom-order-box p {
+  font-size: 16px;
+  color: var(--gold-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.custom-order-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(232, 211, 167, 0.3);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+}
+
+.custom-order-card h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.custom-order-card p {
+  font-size: 13px;
+  color: #f7e6c9;
+  margin-bottom: 20px;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--burgundy-deep);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.25s ease;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* Action Order 3: Call or Text */
+.call-text-section {
+  background: var(--cream);
+  padding: 60px 24px;
+}
+
+.contact-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--cream-card);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 28px;
+  padding: 44px;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(140, 13, 30, 0.05);
+}
+
+.contact-card .hand-badge {
+  font-size: 26px;
+  color: var(--burgundy);
+  margin-bottom: 8px;
+}
+
+.contact-card h3 {
+  font-size: 32px;
+  color: var(--burgundy-deep);
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 24px;
+}
+
+.contact-action-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cream-warm);
+  border: 1px dashed var(--burgundy);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 15px;
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+/* Action Order 4: Follow Social Media */
+.social-section {
+  background: var(--cream-warm);
+  padding: 60px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(140, 13, 30, 0.06);
+}
+
+.social-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.social-container h3 {
+  font-size: 30px;
+  color: var(--burgundy-deep);
+  margin-bottom: 10px;
+}
+
+.social-container p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.social-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--border-gold);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--burgundy);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Policies & Ordering Section */
+.policies-section {
+  background: #fff;
+  padding: 80px 24px;
+  border-top: 1px solid rgba(140, 13, 30, 0.08);
+}
+
+.policies-intro-box {
+  background: var(--cream);
+  border-left: 4px solid var(--burgundy);
+  padding: 20px 24px;
+  border-radius: 0 16px 16px 0;
+  margin-bottom: 40px;
+}
+
+.policies-intro-box p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.policy-card {
+  background: var(--cream-card);
+  border: 1px solid rgba(140, 13, 30, 0.12);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+}
+
+.policy-card h4 {
+  font-size: 20px;
+  color: var(--burgundy);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.policy-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: var(--burgundy-deep);
+  color: var(--gold-light);
+  padding: 56px 24px 36px;
+  border-top: 1px solid rgba(232, 211, 167, 0.2);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(232, 211, 167, 0.15);
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: #e5cfb0;
+  line-height: 1.6;
+}
+
+.footer-address {
+  font-size: 13px;
+  color: #e5cfb0;
+  line-height: 1.6;
+}
+
+.footer-address strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(232, 211, 167, 0.7);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-content p { margin: 0 auto 30px; }
+  .hero-actions { justify-content: center; }
+  .hero-photo-wrap { order: -1; }
+  .hero-sticky-note { left: 10px; bottom: -10px; }
+  .popcorn-grid { grid-template-columns: 1fr; }
+  .confections-grid { grid-template-columns: repeat(2, 1fr); }
+  .custom-order-box { grid-template-columns: 1fr; text-align: center; padding: 40px 24px; }
+  .policies-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .confections-grid { grid-template-columns: 1fr; }
+  .popcorn-card.tilt-left, .popcorn-card.tilt-right { transform: none; }
+  .hero-frame { max-width: 320px; }
+  .footer-content { flex-direction: column; }
+  .footer-bottom { flex-direction: column; text-align: left; }
 }
 </style>
 </head>
 <body>
-<div class="topbar">Curated gourmet indulgence • crafted for gifting, celebrating & savoring</div>
 
-<nav>
-  <div class="navlinks"><a href="#collections">Collections</a><a href="#gifting">Gifting</a></div>
-  <a class="logo" href="#"><b>REDBOX</b><small>GOURMET</small></a>
-  <div class="actions"><a href="#ordering">Order online</a></div>
-</nav>
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  Handcrafted Gourmet Indulgence &bull; Small-Batch Popcorn &amp; Confections
+</div>
 
-<section class="hero">
-  <div class="copy">
-    <div class="kicker">The Royal Boutique Collection</div>
-    <h1>Indulgence,<br>beautifully<br>presented.</h1>
-    <p>Gourmet sweets, specialty popcorn and giftable treats presented with the elegance of a fine jewelry house.</p>
-    <a class="btn" href="#collections">Explore the collection</a>
+<!-- Header / Navigation -->
+<header>
+  <div class="nav-container">
+    <a href="#" class="brand-logo">
+      <h1>REDBOX</h1>
+      <span>Gourmet</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop Products</a></li>
+      <li><a href="#custom-order">Custom Orders</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#policies">Policies</a></li>
+    </ul>
+    <div>
+      <a href="#shop" class="btn-pill">Explore Sweets</a>
+    </div>
   </div>
-  <div class="art">
-    <div class="frame"><div class="display"><div class="redbox">REDBOX</div></div></div>
-  </div>
-</section>
+</header>
 
-<section class="intro">
-  <div class="kicker" style="color:#8f713c">Redbox Gourmet</div>
-  <h2>A little ceremony for every craving.</h2>
-  <p>Designed for moments that deserve more than ordinary. From signature popcorn to decadent confections, every selection is meant to feel like opening something precious.</p>
-</section>
-
-<section class="collections" id="collections">
-  <div class="sectionhead"><div><span>Discover</span><h3>The Collections</h3></div><span>Shop all →</span></div>
-  <div class="grid">
-    <article class="card">
-      <div class="visual"><div class="bowl"></div></div>
-      <div class="info"><div><h4>Flavored Popcorn</h4><p>Flavored popcorn selections.</p><div class="product-lines"><strong>Flavors shared</strong><span>Butter</span><span>Caramel</span><span>Other flavors to be confirmed</span></div></div><div>↗</div></div>
-    </article>
-    <article class="card">
-      <div class="visual red"><div class="bonbons"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="info"><div><h4>Confections</h4><div class="product-lines"><strong>Candied apples</strong><span>Original, green apple, watermelon, grape</span><strong>Pecan confections</strong><span>Pecan candy, pecan claws</span><strong>Chocolate-dipped</strong><span>Strawberries: milk, white, or dark chocolate</span><span>Pretzels, marshmallows, pineapple and seasonal fruit</span><strong>Chocolate bars</strong><span>Royce chocolate bars</span></div></div><div>↗</div></div>
-    </article>
-    <article class="card">
-      <div class="visual dark"><div class="gift"></div></div>
-      <div class="info"><div><h4>Gift Boxes</h4><p>Gift boxes are available. Box options and contents to be provided.</p></div><div>↗</div></div>
-    </article>
-  </div>
-</section>
-
-<section class="gifting" id="gifting">
-  <div class="giftart"><div class="gift"></div></div>
-  <div class="giftcopy">
-    <div class="kicker">The Redbox Experience</div>
-    <h3>Made to feel like a gift before it’s even opened.</h3>
-    <p>Deep red. Warm ivory. Antique gold. Every detail is built around presentation—turning gourmet sweets into something worthy of the red carpet.</p>
-    <a class="btn" href="#">Explore gifting</a>
-  </div>
-</section>
-
-<section class="ordering" id="ordering">
-  <div class="kicker" style="color:#8f713c">Ordering &amp; Policies</div>
-  <h3>Order from Redbox Gourmet</h3>
-  <p class="ordering-intro">Redbox Gourmet would like customers to purchase and pay through the website. Online checkout, product pricing, and delivery or shipping details still need to be added before customers can place orders.</p>
-  <div class="policy-grid">
-    <article class="policy-card"><h4>Made to order</h4><p>Please allow 48 hours for made-to-order products. Cancellations require 24 hours’ notice.</p></article>
-    <article class="policy-card"><h4>Refunds &amp; replacements</h4><p>No refunds. A replacement may be provided within 48 hours; store credit may also be an option. The replacement timeframe and credit policy need confirmation before launch.</p></article>
-    <article class="policy-card"><h4>Delivery &amp; shipping</h4><p>Delivery and shipping options are to be offered. Service areas, fees, and product-specific shipping details have not yet been provided.</p></article>
+<!-- Hero Section: Candied Apples Feature -->
+<section class="hero-section">
+  <div class="wrapper">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          &#10022; Royal Boutique Handcrafted Quality
+        </div>
+        <h2>A little ceremony <em>for every craving.</em></h2>
+        <p>Indulgence, beautifully presented. Hand-dipped candied apples, artisanal flavored popcorn, and small-batch confections crafted to bring celebratory luxury to every bite.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn-pill">Shop Products &rarr;</a>
+          <a href="#custom-order" class="btn-outline">Request Custom Order</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-frame">
+          <img src="Glassy_Red_Candy_Apple_Cluster.png" alt="Handcrafted Red Candy Apples Cluster">
+        </div>
+        <div class="hero-sticky-note">
+          <span class="hand-font">Signature Candied Apples!</span>
+          <p>Original, Green Apple, Watermelon &amp; Grape</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Action 1: Shop Products -->
+<section class="shop-section" id="shop">
+  <div class="wrapper">
+    <div class="shop-header">
+      <span class="section-tag">Step 1 &bull; Browse Collection</span>
+      <h3 class="section-title">Shop Our Confections &amp; Treats</h3>
+      <p class="section-desc">Each small batch is prepared with pride, balancing classic artisan methods with timeless luxury presentation.</p>
+    </div>
+
+    <!-- Popcorn Duo Feature (Grouped together) -->
+    <div class="popcorn-duo">
+      <div class="duo-label">
+        <div>
+          <span class="section-tag" style="margin-bottom:4px;">Specialty Collection</span>
+          <h3>Gourmet Flavored Popcorn</h3>
+        </div>
+        <span class="flavors-badge">Freshly Popped &bull; Signature Blends</span>
+      </div>
+      <div class="popcorn-grid">
+        <div class="popcorn-card tilt-left">
+          <div class="img-wrap">
+            <img src="ChatGPT_Image_Sep_30_2026_03_01_16_PM-1.png" alt="Curated Gourmet Popcorn Assortment">
+          </div>
+          <div class="popcorn-caption">
+            <h4>Curated Flavor Sampler</h4>
+            <p>Ribbon-tied gourmet bags nestled in gift-ready presentation.</p>
+            <div class="flavor-list">
+              <span class="flavor-tag">Butter</span>
+              <span class="flavor-tag">Caramel</span>
+              <span class="flavor-tag">White Cheddar</span>
+              <span class="flavor-tag">Chocolate Caramel</span>
+              <span class="flavor-tag" style="font-style:italic;color:var(--muted);">Other flavors to be confirmed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="popcorn-card tilt-right">
+          <div class="img-wrap">
+            <img src="ChatGPT_Image_Sep_30_2026_03_01_16_PM-2.png" alt="Black Boutique Box Popcorn with Gold Wax Seal">
+          </div>
+          <div class="popcorn-caption">
+            <h4>Boutique Keepsake Carton</h4>
+            <p>Sculpted black carton finished with an embossed antique gold seal.</p>
+            <div class="flavor-list">
+              <span class="flavor-tag">Crisp Butter</span>
+              <span class="flavor-tag">Sweet Caramel</span>
+              <span class="flavor-tag" style="font-style:italic;color:var(--muted);">Additional flavors to be confirmed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confections Grid: Pecans, Strawberries, Marshmallows + Text Callouts -->
+    <div class="confections-grid">
+      <!-- 1. Pecan Treats -->
+      <article class="treat-card">
+        <div class="treat-img-wrap">
+          <span class="treat-badge">Artisan Pecans</span>
+          <img src="ChatGPT_Image_Sep_30_2026_03_01_17_PM-3.png" alt="Pecan candy and pecan claws in boutique box">
+        </div>
+        <div class="treat-details">
+          <div>
+            <h4>Pecan Confections</h4>
+            <p>Rich caramel, roasted pecans, and milk chocolate crafted into classic southern treats.</p>
+            <div class="flavor-list">
+              <span class="flavor-tag">Pecan Candy</span>
+              <span class="flavor-tag">Pecan Claws</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Chocolate-Covered Strawberries -->
+      <article class="treat-card">
+        <div class="treat-img-wrap">
+          <span class="treat-badge">Fresh &amp; Dipped</span>
+          <img src="ChatGPT_Image_Sep_30_2026_03_01_17_PM-4.png" alt="Chocolate-covered strawberries platter">
+        </div>
+        <div class="treat-details">
+          <div>
+            <h4>Chocolate-Covered Strawberries</h4>
+            <p>Plump ripe berries hand-dipped and drizzled in our rich Belgian chocolates.</p>
+            <div class="flavor-list">
+              <span class="flavor-tag">Milk Chocolate</span>
+              <span class="flavor-tag">White Chocolate</span>
+              <span class="flavor-tag">Dark Chocolate</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Chocolate-Dipped Marshmallows & Fruit -->
+      <article class="treat-card">
+        <div class="treat-img-wrap">
+          <span class="treat-badge">Festive Sweets</span>
+          <img src="ChatGPT_Image_Sep_30_2026_03_01_18_PM-5.png" alt="Chocolate-dipped marshmallows with sprinkles">
+        </div>
+        <div class="treat-details">
+          <div>
+            <h4>Chocolate-Dipped Treats</h4>
+            <p>Puffy marshmallows and sweet favorites dipped in dark chocolate and rolled in celebratory sprinkles.</p>
+            <div class="flavor-list">
+              <span class="flavor-tag">Marshmallows</span>
+              <span class="flavor-tag">Pretzels</span>
+              <span class="flavor-tag">Pineapple</span>
+              <span class="flavor-tag">Seasonal Fruit</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Text Callout Card: Gift Boxes -->
+      <div class="callout-card">
+        <span class="callout-tag">Curated Gifting</span>
+        <h4>Luxury Gift Boxes</h4>
+        <p>Curated presentation boxes tailored for birthdays, holidays, corporate recognition, and private celebrations.</p>
+        <div class="callout-meta">
+          &#10022; Gift boxes are available.<br>
+          <small style="color:var(--muted);font-weight:normal;">Box options and tiered contents to be provided.</small>
+        </div>
+      </div>
+
+      <!-- 5. Text Callout Card: Royce Chocolate Bars -->
+      <div class="callout-card">
+        <span class="callout-tag">Specialty Chocolate</span>
+        <h4>Royce Chocolate Bars</h4>
+        <p>Distinguished, silky confectionery bars renowned for velvety melt and exceptional finish.</p>
+        <div class="callout-meta">
+          &#10022; Royce chocolate bars are offered.<br>
+          <small style="color:var(--muted);font-weight:normal;">Bar flavor selections and weights to be provided.</small>
+        </div>
+      </div>
+
+      <!-- 6. Candied Apple Flavor Callout -->
+      <div class="callout-card" style="background: linear-gradient(145deg, #fffcf7 0%, #faede8 100%);">
+        <span class="callout-tag" style="background:var(--burgundy-soft);">Signature Glaze</span>
+        <h4>Candied Apple Flavors</h4>
+        <p>Crisp orchard apples locked inside our lustrous, glassy jewel coats.</p>
+        <div class="flavor-list" style="justify-content:center;">
+          <span class="flavor-tag" style="background:#fff;border:1px solid var(--border-gold);">Original Red</span>
+          <span class="flavor-tag" style="background:#fff;border:1px solid var(--border-gold);">Green Apple</span>
+          <span class="flavor-tag" style="background:#fff;border:1px solid var(--border-gold);">Watermelon</span>
+          <span class="flavor-tag" style="background:#fff;border:1px solid var(--border-gold);">Grape</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Action 2: Request a Custom Order -->
+<section class="custom-order-section" id="custom-order">
+  <div class="wrapper">
+    <div class="custom-order-box">
+      <div>
+        <span class="section-tag" style="color:var(--gold-light);">Step 2 &bull; Bespoke Orders</span>
+        <h3>Request a Custom Order</h3>
+        <p>Planning a wedding, milestone gala, corporate gift dispatch, or themed celebration? We hand-craft custom assortment boxes, personalized ribbons, and coordinated dessert platters.</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.75);">Please remember: allow 48 hours for made-to-order confections. Cancellations require 24 hours’ notice.</p>
+      </div>
+      <div class="custom-order-card">
+        <span class="hand-font" style="font-size:28px;color:var(--gold-light);display:block;margin-bottom:8px;">Have a special event?</span>
+        <h4>Custom Inquiry</h4>
+        <p>Inquiry form and ordering portal details will be connected here prior to official launch.</p>
+        <button class="btn-gold" type="button" onclick="alert('Custom order inquiry form will be available once online checkout is connected.')">Inquire About Custom Orders</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Action 3: Call or Text -->
+<section class="call-text-section" id="contact">
+  <div class="wrapper">
+    <div class="contact-card">
+      <div class="hand-badge hand-font">We’d love to speak with you!</div>
+      <span class="section-tag">Step 3 &bull; Direct Touch</span>
+      <h3>Call or Text Redbox Gourmet</h3>
+      <p>Have questions about flavors, special delivery requests, or packaging? Reach out directly to our confections team.</p>
+      <div class="contact-action-badge">
+        <span>&#128222; Call or Text:</span>
+        <em>[Telephone number to be confirmed prior to launch]</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Action 4: Follow Social Media -->
+<section class="social-section" id="social">
+  <div class="wrapper">
+    <div class="social-container">
+      <span class="section-tag">Step 4 &bull; Community</span>
+      <h3>Follow Our Sweet Journey</h3>
+      <p>See our latest small-batch creations, behind-the-scenes dipping sessions, and seasonal announcements.</p>
+      <div class="social-pills">
+        <span class="social-pill">&#10022; Instagram: <em>[Handle to be confirmed]</em></span>
+        <span class="social-pill">&#10022; Facebook: <em>[Page to be confirmed]</em></span>
+        <span class="social-pill">&#10022; TikTok: <em>[Handle to be confirmed]</em></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ordering Status & Stated Policies -->
+<section class="policies-section" id="policies">
+  <div class="wrapper">
+    <span class="section-tag">Important Information</span>
+    <h3 class="section-title">Ordering &amp; Policies</h3>
+    
+    <div class="policies-intro-box">
+      <strong style="color:var(--burgundy);display:block;margin-bottom:4px;font-size:16px;">Notice Regarding Online Checkout</strong>
+      <p>Redbox Gourmet would like customers to purchase and pay through the website. Online checkout, product pricing, and delivery or shipping details still need to be added before customers can place orders.</p>
+    </div>
+
+    <div class="policies-grid">
+      <article class="policy-card">
+        <h4>Made to order</h4>
+        <p>Please allow 48 hours for made-to-order products. Cancellations require 24 hours’ notice.</p>
+      </article>
+
+      <article class="policy-card">
+        <h4>Refunds &amp; replacements</h4>
+        <p>No refunds. A replacement may be provided within 48 hours; store credit may also be an option. The replacement timeframe and credit policy need confirmation before launch.</p>
+      </article>
+
+      <article class="policy-card">
+        <h4>Delivery &amp; shipping</h4>
+        <p>Delivery and shipping options are to be offered. Service areas, fees, and product-specific shipping details have not yet been provided.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  <div><div class="brand">REDBOX GOURMET</div><small>Luxury sweets • Specialty popcorn • Curated gifting<br>Mailing address: P.O. Box 366303, Atlanta, GA 30336</small></div>
-  <small>CONCEPT 01 — ROYAL BOUTIQUE<br>Homepage visual direction / mockup</small>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>REDBOX GOURMET</h2>
+      <p>Curated gourmet indulgence &bull; crafted for gifting, celebrating &amp; savoring</p>
+    </div>
+    <div class="footer-address">
+      <strong>Mailing Address</strong>
+      <p>P.O. Box 366303<br>Atlanta, GA 30336</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Redbox Gourmet. All rights reserved.</div>
+    <div>Luxury sweets &bull; Specialty popcorn &bull; Curated gifting</div>
+  </div>
 </footer>
+
 </body>
 </html>
