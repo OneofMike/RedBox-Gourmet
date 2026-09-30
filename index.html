@@ -9,23 +9,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Velvet Crimson & Royal Red Theme */
-  --bg-primary: #8f0d1e;       /* Velvet crimson canvas */
-  --bg-dark-wine: #5c0714;     /* Deep wine section background */
-  --bg-deep-oxblood: #3d0309;  /* Oxblood header & accents */
+  --cream: #faf5ee;
+  --cream-warm: #f4ece1;
+  --cream-card: #ffffff;
+  --burgundy: #8c0d1e;
+  --burgundy-deep: #52050e;
+  --burgundy-soft: #c93b4a;
+  --ink: #1f1a17;
+  --muted: #6e655f;
+  --gold: #b38a38;
+  --gold-light: #e8d3a7;
+  --border-gold: rgba(179, 138, 56, 0.25);
+}
 
-  /* Mapped compatibility variables for your existing rules */
-  --cream: #8f0d1e;            /* Turns main background into velvet crimson */
-  --cream-warm: #5c0714;       /* Turns secondary sections into deep wine */
-  --cream-card: #45040d;       /* Turns cards into dark oxblood */
-  --burgundy: #e2ba4d;         /* Primary buttons & accents in luminous gold */
-  --burgundy-deep: #2e0207;    /* Top announcement bar in deep oxblood */
-  --burgundy-soft: #a81528;    /* Crimson touches */
-  --ink: #fffdf9;              /* Warm ivory text for clean readability */
-  --muted: #e8d7c6;            /* Soft champagne body copy */
-  --gold: #e2ba4d;             /* Luminous antique gold */
-  --gold-light: #fbeac4;       /* Champagne gold highlights */
-  --border-gold: rgba(226, 186, 77, 0.35);
+header {
+  background: rgba(250, 245, 238, 0.94);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(140, 13, 30, 0.12);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--burgundy);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 
